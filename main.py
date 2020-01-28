@@ -13,9 +13,9 @@ for current_page in range(len(pdf_document)):
             os.mkdir(f'img')
 
         if pix.n < 5:        # this is GRAY or RGB
-            pix.writePNG(f"img/page%s-%s.png" % (current_page, xref))
+            pix.writePNG(f"img/page%s-%s.jpg" % (current_page, xref))
         else:                # CMYK: convert to RGB first
             pix1 = fitz.Pixmap(fitz.csRGB, pix)
-            pix1.writePNG(f"img/page%s-%s.png" % (current_page, xref))
+            pix1.writePNG(f"img/page%s-%s.jpg" % (current_page, xref))
 
 
