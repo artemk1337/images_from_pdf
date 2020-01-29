@@ -10,6 +10,13 @@ from tkinter.ttk import Progressbar
 import tkinter.ttk as ttk
 
 
+# Не запускать в консоли IDE!!!
+import win32gui, win32con
+The_program_to_hide = win32gui.GetForegroundWindow()
+win32gui.ShowWindow(The_program_to_hide , win32con.SW_HIDE)
+
+
+
 def start():
     d = file_name
     # d = str(input('Перетащите файл в окно: ')).replace("\"", "")
